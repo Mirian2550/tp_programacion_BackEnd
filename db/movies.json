@@ -1,0 +1,290 @@
+[
+  {
+    "id": 1,
+    "title": "El Padrino",
+    "genre": "Clásicos inolvidables",
+    "year": 1972,
+    "duration_min": 175,
+    "image_url": "https://ejemplo.com/padrino.jpg",
+    "language": "Inglés",
+    "description": "El patriarca de una dinastía criminal transfiere el control de su imperio clandestino a su renuente hijo."
+  },
+  {
+    "id": 2,
+    "title": "Casablanca",
+    "genre": "Clásicos inolvidables",
+    "year": 1942,
+    "duration_min": 102,
+    "image_url": "https://ejemplo.com/casablanca.jpg",
+    "language": "Inglés",
+    "description": "Un cínico dueño de un club nocturno en Marruecos debe elegir entre su amor y ayudar a su ex-amante y a su esposo a escapar de los nazis."
+  },
+  {
+    "id": 3,
+    "title": "Ciudadano Kane",
+    "genre": "Clásicos inolvidables",
+    "year": 1941,
+    "duration_min": 119,
+    "image_url": "https://ejemplo.com/ciudadano_kane.jpg",
+    "language": "Inglés",
+    "description": "Un reportero investiga la vida del magnate Charles Foster Kane y el significado de su última palabra, 'Rosebud'."
+  },
+  {
+    "id": 4,
+    "title": "2001: Odisea del Espacio",
+    "genre": "Clásicos inolvidables",
+    "year": 1968,
+    "duration_min": 149,
+    "image_url": "https://ejemplo.com/2001.jpg",
+    "language": "Inglés",
+    "description": "La evolución de la humanidad, el significado de los monolitos y el desafío de la inteligencia artificial HAL 9000."
+  },
+
+  {
+    "id": 5,
+    "title": "Cadena Perpetua",
+    "genre": "Drama",
+    "year": 1994,
+    "duration_min": 142,
+    "image_url": "https://ejemplo.com/cadena_perpetua.jpg",
+    "language": "Inglés",
+    "description": "Un banquero es condenado por error y enviado a prisión, donde se hace amigo de un compañero y planean su escape."
+  },
+  {
+    "id": 6,
+    "title": "La Lista de Schindler",
+    "genre": "Drama",
+    "year": 1993,
+    "duration_min": 195,
+    "image_url": "https://ejemplo.com/schindler.jpg",
+    "language": "Inglés",
+    "description": "Un empresario alemán salva la vida de más de mil refugiados judíos durante el Holocausto."
+  },
+  {
+    "id": 7,
+    "title": "Manchester by the Sea",
+    "genre": "Drama",
+    "year": 2016,
+    "duration_min": 137,
+    "image_url": "https://ejemplo.com/manchester.jpg",
+    "language": "Inglés",
+    "description": "Un conserje regresa a su pueblo natal para cuidar del hijo de su hermano fallecido y debe enfrentar su trágico pasado."
+  },
+  {
+    "id": 8,
+    "title": "El Secreto de sus Ojos",
+    "genre": "Drama",
+    "year": 2009,
+    "duration_min": 129,
+    "image_url": "https://ejemplo.com/secreto_ojos.jpg",
+    "language": "Español",
+    "description": "Un exagente judicial revive el caso de un asesinato sin resolver, explorando el amor no correspondido y la justicia."
+  },
+
+  {
+    "id": 9,
+    "title": "Superbad",
+    "genre": "Comedia",
+    "year": 2007,
+    "duration_min": 113,
+    "image_url": "https://ejemplo.com/superbad.jpg",
+    "language": "Inglés",
+    "description": "Dos amigos intentan comprar alcohol para una fiesta antes de graduarse, lo que resulta en una noche desastrosa."
+  },
+  {
+    "id": 10,
+    "title": "Tonto y Retonto",
+    "genre": "Comedia",
+    "year": 1994,
+    "duration_min": 107,
+    "image_url": "https://ejemplo.com/tonto_retonto.jpg",
+    "language": "Inglés",
+    "description": "Dos amigos de poca inteligencia emprenden un viaje a Aspen para devolver un maletín lleno de dinero."
+  },
+  {
+    "id": 11,
+    "title": "Airplane!",
+    "genre": "Comedia",
+    "year": 1980,
+    "duration_min": 88,
+    "image_url": "https://ejemplo.com/airplane.jpg",
+    "language": "Inglés",
+    "description": "Un ex-piloto debe aterrizar un avión después de que la tripulación y los pasajeros sufren intoxicación alimentaria, una parodia clásica."
+  },
+  {
+    "id": 12,
+    "title": "La vida de Brian",
+    "genre": "Comedia",
+    "year": 1979,
+    "duration_min": 94,
+    "image_url": "https://ejemplo.com/brian.jpg",
+    "language": "Inglés",
+    "description": "Un hombre nacido el mismo día que Jesús es confundido repetidamente con el Mesías, generando situaciones absurdas."
+  },
+
+  {
+    "id": 13,
+    "title": "Mad Max: Furia en el camino",
+    "genre": "Acción",
+    "year": 2015,
+    "duration_min": 120,
+    "image_url": "https://ejemplo.com/mad_max.jpg",
+    "language": "Inglés",
+    "description": "En un páramo post-apocalíptico, una mujer se rebela contra un tirano, llevándose a sus cinco esposas y buscando ayuda en Max."
+  },
+  {
+    "id": 14,
+    "title": "Misión Imposible: Sentencia Mortal - Parte Uno",
+    "genre": "Acción",
+    "year": 2023,
+    "duration_min": 163,
+    "image_url": "https://ejemplo.com/mision_imposible.jpg",
+    "language": "Inglés",
+    "description": "Ethan Hunt y su equipo deben rastrear una nueva y aterradora arma que amenaza a toda la humanidad."
+  },
+  {
+    "id": 15,
+    "title": "John Wick 4",
+    "genre": "Acción",
+    "year": 2023,
+    "duration_min": 169,
+    "image_url": "https://ejemplo.com/john_wick4.jpg",
+    "language": "Inglés",
+    "description": "John Wick descubre un camino para derrotar a La Mesa Alta, pero antes debe enfrentarse a un nuevo enemigo con poderosas alianzas globales."
+  },
+  {
+    "id": 16,
+    "title": "Duro de Matar",
+    "genre": "Acción",
+    "year": 1988,
+    "duration_min": 132,
+    "image_url": "https://ejemplo.com/duro_matar.jpg",
+    "language": "Inglés",
+    "description": "Un policía de Nueva York debe rescatar a su esposa y a varios rehenes de terroristas durante una fiesta de Navidad en un rascacielos."
+  },
+
+
+  {
+    "id": 17,
+    "title": "El Exorcista",
+    "genre": "Terror",
+    "year": 1973,
+    "duration_min": 122,
+    "image_url": "https://ejemplo.com/exorcista.jpg",
+    "language": "Inglés",
+    "description": "Dos sacerdotes intentan salvar a una niña poseída por una entidad demoníaca."
+  },
+  {
+    "id": 18,
+    "title": "Hereditary",
+    "genre": "Terror",
+    "year": 2018,
+    "duration_min": 127,
+    "image_url": "https://ejemplo.com/hereditary.jpg",
+    "language": "Inglés",
+    "description": "Una familia se enfrenta a secretos oscuros y a una entidad sobrenatural tras la muerte de la abuela."
+  },
+  {
+    "id": 19,
+    "title": "It (Eso)",
+    "genre": "Terror",
+    "year": 2017,
+    "duration_min": 135,
+    "image_url": "https://ejemplo.com/it_eso.jpg",
+    "language": "Inglés",
+    "description": "Un grupo de niños se une para luchar contra un monstruo cambiaformas que se disfraza de payaso."
+  },
+  {
+    "id": 20,
+    "title": "Psicosis",
+    "genre": "Terror",
+    "year": 1960,
+    "duration_min": 109,
+    "image_url": "https://ejemplo.com/psicosis.jpg",
+    "language": "Inglés",
+    "description": "Una secretaria roba dinero y se registra en un motel apartado dirigido por un joven extraño bajo el dominio de su madre."
+  },
+
+
+  {
+    "id": 21,
+    "title": "Toy Story",
+    "genre": "Animación",
+    "year": 1995,
+    "duration_min": 81,
+    "image_url": "https://ejemplo.com/toy_story.jpg",
+    "language": "Inglés",
+    "description": "Los juguetes de un niño se embarcan en una aventura después de la llegada de un nuevo juguete que amenaza el estatus de Woody."
+  },
+  {
+    "id": 22,
+    "title": "El Viaje de Chihiro",
+    "genre": "Animación",
+    "year": 2001,
+    "duration_min": 125,
+    "image_url": "https://ejemplo.com/chihiro.jpg",
+    "language": "Japonés",
+    "description": "Una niña se adentra en un mundo espiritual para salvar a sus padres, que han sido convertidos en cerdos."
+  },
+  {
+    "id": 23,
+    "title": "Spider-Man: Cruzando el Multiverso",
+    "genre": "Animación",
+    "year": 2023,
+    "duration_min": 140,
+    "image_url": "https://ejemplo.com/spiderman_multiverso.jpg",
+    "language": "Inglés",
+    "description": "Miles Morales se une a Gwen Stacy para explorar el Multiverso y enfrentarse a una amenaza que podría destruir la realidad."
+  },
+  {
+    "id": 24,
+    "title": "Shrek",
+    "genre": "Animación",
+    "year": 2001,
+    "duration_min": 90,
+    "image_url": "https://ejemplo.com/shrek.jpg",
+    "language": "Inglés",
+    "description": "Un ogro solitario se embarca en una misión para rescatar a una princesa con la ayuda de un burro parlante."
+  },
+
+  {
+    "id": 25,
+    "title": "My Octopus Teacher",
+    "genre": "Documental",
+    "year": 2020,
+    "duration_min": 85,
+    "image_url": "https://ejemplo.com/octopus.jpg",
+    "language": "Inglés",
+    "description": "Un cineasta forja una inusual amistad con un pulpo que vive en un bosque de algas marinas sudafricano."
+  },
+  {
+    "id": 26,
+    "title": "Free Solo",
+    "genre": "Documental",
+    "year": 2018,
+    "duration_min": 100,
+    "image_url": "https://ejemplo.com/free_solo.jpg",
+    "language": "Inglés",
+    "description": "Sigue al escalador Alex Honnold mientras se prepara para escalar sin cuerdas El Capitán en el Parque Nacional Yosemite."
+  },
+  {
+    "id": 27,
+    "title": "El dilema de las redes sociales",
+    "genre": "Documental",
+    "year": 2020,
+    "duration_min": 94,
+    "image_url": "https://ejemplo.com/dilema_redes.jpg",
+    "language": "Inglés",
+    "description": "Explora el impacto de las redes sociales en la sociedad, contada por exejecutivos de tecnología."
+  },
+  {
+    "id": 28,
+    "title": "Samsara",
+    "genre": "Documental",
+    "year": 2011,
+    "duration_min": 102,
+    "image_url": "https://ejemplo.com/samsara.jpg",
+    "language": "Sin diálogos",
+    "description": "Un viaje visual a través de 25 países, explorando la conexión de la humanidad con la naturaleza y el ciclo de la vida."
+  }
+]
