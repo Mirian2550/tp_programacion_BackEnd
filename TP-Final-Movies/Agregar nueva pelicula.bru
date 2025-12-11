@@ -1,0 +1,28 @@
+meta {
+  name: Agregar nueva pelicula
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/movies
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "titulo": "El Laberinto del Fauno",
+    "genero": "Fantasía Oscura, Drama",
+    "anio": "2006",
+    "duracion": "118",
+    "image_url": "https://example.com/imagen-laberinto-fauno.jpg",
+    "idioma": "Español",
+    "descripcion": "En el año 1944, en España, la joven Ofelia descubre un mundo de fantasía lleno de criaturas mágicas mientras lidia con la crueldad de su nuevo padrastro."
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

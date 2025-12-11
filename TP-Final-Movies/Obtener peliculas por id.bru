@@ -1,0 +1,15 @@
+meta {
+  name: Obtener peliculas por id 
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/movies/2
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

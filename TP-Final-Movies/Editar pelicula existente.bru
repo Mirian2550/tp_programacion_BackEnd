@@ -1,0 +1,15 @@
+meta {
+  name: Editar pelicula existente
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3000/movies/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
