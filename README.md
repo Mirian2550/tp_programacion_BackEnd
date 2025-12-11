@@ -6,8 +6,9 @@
 
 - Francisco Falabella
 - Mirian Yañez
-- Elías Romero
 - Brisa Giavedoni
+- Elías Romero
+
 
 ## Año
 
