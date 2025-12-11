@@ -10,13 +10,11 @@ async function readMovies() {
   return JSON.parse(data);
 }
 
-async function writeMovies() {
-  await fs.writeFile(DB_PATH, "utf-8");
+async function writeMovies(movies) {
+  await fs.writeFile(DB_PATH, JSON.stringify(movies), "utf-8");
 }
-// Esa de arriba o esta:
-// async function writeMovies(X) {
-//     await fs.writeFile(DB_PATH, JSON.stringify(X), "utf-8");
-//   }
+
+//CONTROLLERS
 
 async function getAllMovies(req, res) {
   try {
@@ -50,39 +48,90 @@ async function getAllMovies(req, res) {
   }
 }
 
-async function getMoviesById(req, res) {}
+async function getMoviesById(req, res) {
+  try {
+    const movies = await readMovies();
+    const idParam = req.params.id;
+    const id = parseInt(idParam);
+
+    if (Number.isNaN(id) || id <= 0) {
+      return res
+        .status(400)
+        .json({ message: "ID no válido! Debe ser un número positivo." });
+    }
+
+    const movie = movies.find((movie) => movie.id === id);
+
+    if (!movie || movie.isDeleted === true) {
+      return res.status(404).json({ message: "La película no existe" });
+    }
+
+    res.json(movie);
+  } catch (err) {
+    console.error("Error al leer el archivo: ", err);
+    res.status(500).json({ message: "Error interno del servidor" });
+  }
+}
 
 async function createMovie(req, res) {
   try {
     const movies = await readMovies();
 
-    const { titulo, genero, anio, descripcion } = req.body;
+    const { titulo, genero, anio, duracion, image_url, idioma, descripcion } =
+      req.body;
 
-    if (titulo || genero || anio || descripcion) {
+    if (
+      !titulo ||
+      !genero ||
+      !anio ||
+      !duracion ||
+      !image_url ||
+      !idioma ||
+      !descripcion
+    ) {
       return res
         .status(400)
         .json({ message: "Por favor, completa los datos obligatorios" });
     }
 
-    if (typeof titulo !== "string" || typeof autor !== "string") {
+    if (
+      typeof titulo !== "string" ||
+      typeof descripcion !== "string" ||
+      typeof genero !== "string" ||
+      typeof idioma !== "string" ||
+      typeof image_url !== "string"
+    ) {
       return res
         .status(400)
-        .json({ message: "El título y el autor deben ser en formato texto" });
+        .json({
+          message:
+            "Los campos de texto (título, descripción, género, idioma, URL de imagen) deben ser en formato texto.",
+        });
     }
+
+    const parsedAnio = parseInt(anio, 10);
+    const parsedDuracion = parseInt(duracion, 10);
 
     const currentYear = new Date().getFullYear();
 
-    if (isNaN(anio) || movieData.anio > currentYear || movieData.anio <= 0) {
+    if (isNaN(parsedAnio) || parsedAnio > currentYear || parsedAnio <= 0) {
       return res.status(400).json({
         message: `El año debe ser entre 0 y ${currentYear}`,
       });
     }
 
+    if (isNaN(parsedDuracion) || parsedDuracion <= 0) {
+        return res.status(400).json({
+            message: "La duración debe ser un número entero positivo (en minutos).",
+        });
+    }
+
     const exist = movies.some(
       (movie) =>
-        movie.title.toLowerCase() === movieData.titulo.toLowerCase() &&
-        movie.year.toLowerCase() === movieData.anio.toLowerCase()
+        movie.title.toLowerCase() === titulo.toLowerCase() &&
+        movie.year === parsedAnio
     );
+    
     if (exist) {
       return res
         .status(409)
@@ -96,26 +145,57 @@ async function createMovie(req, res) {
       id: id,
       title: titulo,
       genre: genero,
-      year: anio,
-      duration_min: duracion,
+      year: parsedAnio,
+      duration_min: parsedDuracion,
+      image_url: image_url,
       language: idioma,
       description: descripcion,
+      isDeleted: false,
     };
 
     movies.push(newMovie);
 
     await writeMovies(movies);
 
-    req.status(201).json({ message: "Película agregada correctamente" });
+    res.status(201).json({ message: "Película agregada correctamente" });
   } catch (err) {
     console.error("Error en la actualización", err);
     res.status(500).json({ message: "Error interno del servidor" });
   }
 }
 
-async function deleteMovie(req, res) {}
+async function deleteMovie(req, res) {
+  try {
+    const movies = await readMovies();
+    const idParam = req.params.id;
+    const id = parseInt(idParam);
+
+    if (Number.isNaN(id) || id <= 0) {
+      return res.status(400).json({ message: "ID no válido!" });
+    }
+
+    const movieIndex = movies.findIndex((movie) => movie.id === id);
+
+    if (movieIndex === -1 || movies[movieIndex].isDeleted === true) {
+      return res.status(404).json({ message: "La película no existe" });
+    }
+
+    movies[movieIndex].isDeleted = true;
+
+    await writeMovies(movies);
+
+    res.json({
+      message: "Película eliminada correctamente",
+      pelicula: movies[movieIndex],
+    });
+  } catch (err) {
+    console.error("Error al leer el archivo: ", err);
+    res.status(500).json({ message: "Error interno del servidor" });
+  }
+}
 
 async function updateMovie(req, res) {}
+
 
 module.exports = {
   getAllMovies,
