@@ -1,5 +1,4 @@
 const express = require("express");
-
 const cors = require("cors");
 
 const moviesRoutes = require("./routes/movies.routes");
@@ -14,9 +13,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(moviesRoutes);
 
 app.use((req, res) => {
-  res.status(404).send("Página no encontrada :(");
+  res.status(404).send("Página no encontrada");
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor escuchado en el puerto ${PORT}`);
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
