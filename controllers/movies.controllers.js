@@ -19,7 +19,7 @@ async function writeMovies(movies) {
 async function getAllMovies(req, res) {
   try {
     const movies = await readMovies();
-    const activeMovies = movies.filter((m) => m.active === true);
+    const activeMovies = movies.filter((m) => m.isDeleted !== true); // Lee correctamente el query parameter 'genre'
 
     const filterGenre = req.query.genre;
 
@@ -190,7 +190,7 @@ async function deleteMovie(req, res) {
 
     return res.json({
       message: "Película eliminada correctamente!",
-      libro: movies[index],
+      movie: movies[index],
     });
   } catch (err) {
     console.error("Error del delete /movies/:id", err);
