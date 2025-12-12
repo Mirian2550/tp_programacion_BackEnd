@@ -17,35 +17,34 @@ async function writeMovies(movies) {
 //CONTROLLERS
 
 async function getAllMovies(req, res) {
-  try {
-    const movies = await readMovies();
-    
-    const activeMovies = movies.filter((m) => m.isDeleted !== true);
+  try {
+    const movies = await readMovies();
+    const activeMovies = movies.filter((m) => m.isDeleted !== true); // Lee correctamente el query parameter 'genre'
 
-    // Lee correctamente el query parameter 'genre'
-    const filterGenre = req.query.genre; 
+    const filterGenre = req.query.genre;
 
-    if (filterGenre) {
+    if (filterGenre) {
+      const filteredMovies = activeMovies.filter(
+        (movie) => movie.genre.toLowerCase() === filterGenre.toLowerCase()
+      );
 
-      const filteredMovies = activeMovies.filter(
-        (movie) => movie.genre.toLowerCase() === filterGenre.toLowerCase()
-      );
+      if (filteredMovies.length === 0) {
+        return res
+          .status(404)
+          .json({
+            mensaje: `No se han encontrado películas en el género: ${filterGenre}`,
+          });
+      }
 
-      if (filteredMovies.length === 0) {
-        return res
-          .status(404)
-          .json({ mensaje: `No se han encontrado películas en el género: ${filterGenre}` });
-      }
+      return res.json(filteredMovies);
+    }
 
-      return res.json(filteredMovies);
-    }
+    res.json(activeMovies);
+  } catch (err) {
+    console.log("Error al leer el archivo: ", err);
 
-    res.json(activeMovies);
-  } catch (err) {
-    console.log("Error al leer el archivo: ", err);
-
-    res.status(500).send("Error interno del servidor");
-  }
+    res.status(500).send("Error interno del servidor");
+  }
 }
 
 async function getMoviesById(req, res) {
@@ -101,12 +100,10 @@ async function createMovie(req, res) {
       typeof idioma !== "string" ||
       typeof image_url !== "string"
     ) {
-      return res
-        .status(400)
-        .json({
-          message:
-            "Los campos de texto (título, descripción, género, idioma, URL de imagen) deben ser en formato texto.",
-        });
+      return res.status(400).json({
+        message:
+          "Los campos de texto (título, descripción, género, idioma, URL de imagen) deben ser en formato texto.",
+      });
     }
 
     const parsedAnio = parseInt(anio, 10);
@@ -121,9 +118,9 @@ async function createMovie(req, res) {
     }
 
     if (isNaN(parsedDuracion) || parsedDuracion <= 0) {
-        return res.status(400).json({
-            message: "La duración debe ser un número entero positivo (en minutos).",
-        });
+      return res.status(400).json({
+        message: "La duración debe ser un número entero positivo (en minutos).",
+      });
     }
 
     const exist = movies.some(
@@ -131,7 +128,7 @@ async function createMovie(req, res) {
         movie.title.toLowerCase() === titulo.toLowerCase() &&
         movie.year === parsedAnio
     );
-    
+
     if (exist) {
       return res
         .status(409)
@@ -195,7 +192,6 @@ async function deleteMovie(req, res) {
 }
 
 async function updateMovie(req, res) {}
-
 
 module.exports = {
   getAllMovies,
