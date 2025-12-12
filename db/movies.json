@@ -316,7 +316,7 @@
     "image_url": "https://m.media-amazon.com/images/S/pv-target-images/5ea3b0f74fe2901a697365e20b15ac3accdcf68365f9db9aa039f07ae5368165.jpg",
     "language": "Español",
     "description": "En el año 1944, en España, la joven Ofelia descubre un mundo de fantasía lleno de criaturas mágicas mientras lidia con la crueldad de su nuevo padrastro.",
-    "isDeleted": true
+    "active": true
   },
   {
     "id": 30,
