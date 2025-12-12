@@ -327,6 +327,6 @@
     "image_url": "https://example.com/img.jpg",
     "language": "Español",
     "description": "Otra descripción",
-    "active": true
+    "active": false
   }
 ]
