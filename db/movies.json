@@ -8,7 +8,7 @@
     "image_url": "https://es.web.img3.acsta.net/pictures/18/06/12/12/12/0117051.jpg?coixp=49&coiyp=27",
     "language": "Inglés",
     "description": "El patriarca de una dinastía criminal transfiere el control de su imperio clandestino a su renuente hijo.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/CasablancaPoster-Gold.jpg",
     "language": "Inglés",
     "description": "Un cínico dueño de un club nocturno en Marruecos debe elegir entre su amor y ayudar a su ex-amante y a su esposo a escapar de los nazis.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkb31r-sjPXgx_p9RhDJblyHS-7a7VoSfYqg&s",
     "language": "Inglés",
     "description": "Un reportero investiga la vida del magnate Charles Foster Kane y el significado de su última palabra, 'Rosebud'.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG0VDG0UVmzLIbqYZujWC7jjJjcCew8Vxs1g&s",
     "language": "Inglés",
     "description": "La evolución de la humanidad, el significado de los monolitos y el desafío de la inteligencia artificial HAL 9000.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAAs0Q7afGPrxkwxeT7V4HiaFesTT_skDlrg&s",
     "language": "Inglés",
     "description": "Un banquero es condenado por error y enviado a prisión, donde se hace amigo de un compañero y planean su escape.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-TVFNWl3ymQI2pUS73--T0FwI9-sY2Qh37g&s",
     "language": "Inglés",
     "description": "Un empresario alemán salva la vida de más de mil refugiados judíos durante el Holocausto.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi-E9zxdElaKKWMXGBIvSi-_1pQsgQGkWzvw&s",
     "language": "Inglés",
     "description": "Un conserje regresa a su pueblo natal para cuidar del hijo de su hermano fallecido y debe enfrentar su trágico pasado.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "image_url": "https://pics.filmaffinity.com/El_secreto_de_sus_ojos-483213496-large.jpg",
     "language": "Español",
     "description": "Un exagente judicial revive el caso de un asesinato sin resolver, explorando el amor no correspondido y la justicia.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvQ51SfTe342poQOaQaRgMQNUzrwyzqc8oiQ&s",
     "language": "Inglés",
     "description": "Dos amigos intentan comprar alcohol para una fiesta antes de graduarse, lo que resulta en una noche desastrosa.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "image_url": "https://img.peliplat.com/api/resize/v1?imagePath=peliplat/default/20230613/fe4b2e722d1f6fd2d8829200d47bc690.jpeg&source=s3-peliplat&mode=FILL&width=220&height=330&limit=false&c=1.jpg",
     "language": "Inglés",
     "description": "Dos amigos de poca inteligencia emprenden un viaje a Aspen para devolver un maletín lleno de dinero.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "image_url": "https://m.media-amazon.com/images/M/MV5BNGMxMDRhMjItMDNlZi00MDIzLWE5MDQtODljMDQ3MWM1Y2E4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     "language": "Inglés",
     "description": "Un ex-piloto debe aterrizar un avión después de que la tripulación y los pasajeros sufren intoxicación alimentaria, una parodia clásica.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
     "image_url": "https://images.justwatch.com/poster/331213562/s718/la-vida-de-brian.jpg",
     "language": "Inglés",
     "description": "Un hombre nacido el mismo día que Jesús es confundido repetidamente con el Mesías, generando situaciones absurdas.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
     "image_url": "https://m.media-amazon.com/images/M/MV5BODE2NWUwYmYtYmNmZi00OTVjLTgxMzEtZWYyMWVmODg5MmM2XkEyXkFqcGc@._V1_.jpg",
     "language": "Inglés",
     "description": "En un páramo post-apocalíptico, una mujer se rebela contra un tirano, llevándose a sus cinco esposas y buscando ayuda en Max.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "image_url": "https://pics.filmaffinity.com/Misiaon_imposible_Sentencia_mortal_Parte_1-902615661-large.jpg",
     "language": "Inglés",
     "description": "Ethan Hunt y su equipo deben rastrear una nueva y aterradora arma que amenaza a toda la humanidad.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
     "image_url": "https://m.media-amazon.com/images/S/pv-target-images/6d3d1461d50778271845ce7ec81ba2c5d76a20f7f84e5061cd099aabaedc77f9.jpg",
     "language": "Inglés",
     "description": "John Wick descubre un camino para derrotar a La Mesa Alta, pero antes debe enfrentarse a un nuevo enemigo con poderosas alianzas globales.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
     "image_url": "https://play-lh.googleusercontent.com/aA1-G0e286h7QmQupfiA0J1IXhwJhCJKtqVBZGw8-aEZjOtaB4yewjRv451oUTmRG9VwQg",
     "language": "Inglés",
     "description": "Un policía de Nueva York debe rescatar a su esposa y a varios rehenes de terroristas durante una fiesta de Navidad en un rascacielos.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
     "image_url": "https://play-lh.googleusercontent.com/qRTJMWuxniESeJDkFLlZ6sgPSA-sIvjOzMLL2hqXhJRXfhF-d23JK93lAHaRxwYGpy0F",
     "language": "Inglés",
     "description": "Dos sacerdotes intentan salvar a una niña poseída por una entidad demoníaca.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
     "image_url": "https://play-lh.googleusercontent.com/mQI5E1NfYmJLQogeiKVw4dEsxl_KlDY3k_mHloBc-riizqI8SikBXlK1E5GRkgghfZo=w240-h480-rw",
     "language": "Inglés",
     "description": "Una familia se enfrenta a secretos oscuros y a una entidad sobrenatural tras la muerte de la abuela.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 19,
@@ -206,7 +206,7 @@
     "image_url": "https://es.web.img2.acsta.net/c_310_420/medias/nmedia/18/87/80/19/19961693.jpg",
     "language": "Inglés",
     "description": "Un grupo de niños se une para luchar contra un monstruo cambiaformas que se disfraza de payaso.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 20,
@@ -217,7 +217,7 @@
     "image_url": "https://m.media-amazon.com/images/M/MV5BOGMzMmMyZjQtYTI4YS00ZDIxLWIyYjgtYWVlYzk2MWE5MjJlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     "language": "Inglés",
     "description": "Una secretaria roba dinero y se registra en un motel apartado dirigido por un joven extraño bajo el dominio de su madre.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 21,
@@ -228,7 +228,7 @@
     "image_url": "https://images.justwatch.com/poster/778054/s718/toy-story.jpg",
     "language": "Inglés",
     "description": "Los juguetes de un niño se embarcan en una aventura después de la llegada de un nuevo juguete que amenaza el estatus de Woody.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 22,
@@ -239,7 +239,7 @@
     "image_url": "https://m.media-amazon.com/images/M/MV5BMWI1OTdjN2EtOGUxYy00ZDBmLWFlNzAtNmRkZjhiMTIzOTNhXkEyXkFqcGc@._V1_.jpg",
     "language": "Japonés",
     "description": "Una niña se adentra en un mundo espiritual para salvar a sus padres, que han sido convertidos en cerdos.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 23,
@@ -250,7 +250,7 @@
     "image_url": "https://images.justwatch.com/poster/305941616/s718/spider-man-into-the-spider-verse-2.jpg",
     "language": "Inglés",
     "description": "Miles Morales se une a Gwen Stacy para explorar el Multiverso y enfrentarse a una amenaza que podría destruir la realidad.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 24,
@@ -261,7 +261,7 @@
     "image_url": "https://media.filmelier.com/tit/d2nL3M/poster/shrek_ptDoaDw.jpeg",
     "language": "Inglés",
     "description": "Un ogro solitario se embarca en una misión para rescatar a una princesa con la ayuda de un burro parlante.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 25,
@@ -272,7 +272,7 @@
     "image_url": "https://resizing.flixster.com/OjtPS7OimqoeB-M0vu-32bVuN4A=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p18683241_v_v7_ak.jpg",
     "language": "Inglés",
     "description": "Un cineasta forja una inusual amistad con un pulpo que vive en un bosque de algas marinas sudafricano.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 26,
@@ -283,7 +283,7 @@
     "image_url": "https://images.justwatch.com/poster/124054476/s166/free-solo.avif",
     "language": "Inglés",
     "description": "Sigue al escalador Alex Honnold mientras se prepara para escalar sin cuerdas El Capitán en el Parque Nacional Yosemite.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 27,
@@ -294,7 +294,7 @@
     "image_url": "https://iessanalbertomagno.catedu.es/wp-content/uploads/2023/04/Dilema-redes-sociales-287x300.jpeg",
     "language": "Inglés",
     "description": "Explora el impacto de las redes sociales en la sociedad, contada por exejecutivos de tecnología.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 28,
@@ -305,7 +305,7 @@
     "image_url": "https://content-viajes.nationalgeographic.com.es/medio/2023/12/12/samsara-sd_bfc20961_231212180823_1280x1828.jpg",
     "language": "Sin diálogos",
     "description": "Un viaje visual a través de 25 países, explorando la conexión de la humanidad con la naturaleza y el ciclo de la vida.",
-    "isDeleted": false
+    "active": true
   },
   {
     "id": 29,
@@ -316,7 +316,17 @@
     "image_url": "https://m.media-amazon.com/images/S/pv-target-images/5ea3b0f74fe2901a697365e20b15ac3accdcf68365f9db9aa039f07ae5368165.jpg",
     "language": "Español",
     "description": "En el año 1944, en España, la joven Ofelia descubre un mundo de fantasía lleno de criaturas mágicas mientras lidia con la crueldad de su nuevo padrastro.",
-    "isDeleted": true,
+    "isDeleted": true
+  },
+  {
+    "id": 30,
+    "title": "La casaaa",
+    "genre": "Drama",
+    "year": 2007,
+    "duration_min": 118,
+    "image_url": "https://example.com/img.jpg",
+    "language": "Español",
+    "description": "Otra descripción",
     "active": true
   }
 ]
