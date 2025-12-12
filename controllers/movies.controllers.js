@@ -29,11 +29,9 @@ async function getAllMovies(req, res) {
       );
 
       if (filteredMovies.length === 0) {
-        return res
-          .status(404)
-          .json({
-            mensaje: `No se han encontrado películas en el género: ${filterGenre}`,
-          });
+        return res.status(404).json({
+          mensaje: `No se han encontrado películas en el género: ${filterGenre}`,
+        });
       }
 
       return res.json(filteredMovies);
@@ -163,31 +161,37 @@ async function createMovie(req, res) {
 
 async function deleteMovie(req, res) {
   try {
-    const movies = await readMovies();
-    const idParam = req.params.id;
-    const id = parseInt(idParam);
+    const id = parseInt(req.params.id, 10);
 
     if (Number.isNaN(id) || id <= 0) {
       return res.status(400).json({ message: "ID no válido!" });
     }
 
-    const movieIndex = movies.findIndex((movie) => movie.id === id);
+    const movies = await readMovies();
 
-    if (movieIndex === -1 || movies[movieIndex].isDeleted === true) {
-      return res.status(404).json({ message: "La película no existe" });
+    const index = movies.findIndex((b) => b.id === id);
+
+    if (index === -1) {
+      return res.status(404).json({ message: "Película no encontrada" });
     }
 
-    movies[movieIndex].isDeleted = true;
+    if (movies[index].active === false) {
+      return res
+        .status(400)
+        .json({ message: "La película no se encuentra disponible" });
+    }
+
+    movies[index].active = false;
 
     await writeMovies(movies);
 
-    res.json({
-      message: "Película eliminada correctamente",
-      pelicula: movies[movieIndex],
+    return res.json({
+      message: "Película eliminada correctamente!",
+      libro: movies[index],
     });
   } catch (err) {
-    console.error("Error al leer el archivo: ", err);
-    res.status(500).json({ message: "Error interno del servidor" });
+    console.error("Error del delete /movies/:id", err);
+    return res.status(500).json({ message: "Error interno del servidor" });
   }
 }
 

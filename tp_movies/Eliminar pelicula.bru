@@ -1,0 +1,16 @@
+meta {
+  name: Eliminar pelicula
+  type: http
+  seq: 2
+}
+
+delete {
+  url: http://localhost:3000/movies/31
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
