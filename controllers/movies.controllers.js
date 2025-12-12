@@ -19,7 +19,7 @@ async function writeMovies(movies) {
 async function getAllMovies(req, res) {
   try {
     const movies = await readMovies();
-    const activeMovies = movies.filter((m) => m.isDeleted !== true); // Lee correctamente el query parameter 'genre'
+    const activeMovies = movies.filter((m) => m.active !== false); // Lee correctamente el query parameter 'genre'
 
     const filterGenre = req.query.genre;
 
@@ -59,7 +59,7 @@ async function getMoviesById(req, res) {
 
     const movie = movies.find((movie) => movie.id === id);
 
-    if (!movie || movie.isDeleted === true) {
+    if (!movie || movie.active === false) {
       return res.status(404).json({ message: "La película no existe" });
     }
 
@@ -145,7 +145,7 @@ async function createMovie(req, res) {
       image_url: image_url,
       language: idioma,
       description: descripcion,
-      isDeleted: false,
+      active: true,
     };
 
     movies.push(newMovie);
