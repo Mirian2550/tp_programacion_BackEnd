@@ -1,0 +1,28 @@
+meta {
+  name: Agregar nueva pelicula
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/movies
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "titulo": "La casa",
+    "genero": "Drama",
+    "anio": 2007,
+    "duracion": 118,
+    "image_url": "https://example.com/img.jpg",
+    "idioma": "Español",
+    "descripcion": "Otra descripción"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

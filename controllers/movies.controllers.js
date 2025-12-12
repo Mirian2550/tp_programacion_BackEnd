@@ -19,7 +19,7 @@ async function writeMovies(movies) {
 async function getAllMovies(req, res) {
   try {
     const movies = await readMovies();
-    const activeMovies = movies.filter((m) => m.isDeleted !== true); // Lee correctamente el query parameter 'genre'
+    const activeMovies = movies.filter((m) => m.active === true);
 
     const filterGenre = req.query.genre;
 
@@ -59,7 +59,7 @@ async function getMoviesById(req, res) {
 
     const movie = movies.find((movie) => movie.id === id);
 
-    if (!movie || movie.isDeleted === true) {
+    if (!movie || movie.active === false) {
       return res.status(404).json({ message: "La película no existe" });
     }
 
@@ -145,16 +145,19 @@ async function createMovie(req, res) {
       image_url: image_url,
       language: idioma,
       description: descripcion,
-      isDeleted: false,
+      active: true,
     };
 
     movies.push(newMovie);
 
     await writeMovies(movies);
 
-    res.status(201).json({ message: "Película agregada correctamente" });
+    res.status(201).json({
+      message: "Película agregada correctamente",
+      pelicula: newMovie,
+    });
   } catch (err) {
-    console.error("Error en la actualización", err);
+    console.error("Error en la creación de la película", err);
     res.status(500).json({ message: "Error interno del servidor" });
   }
 }
@@ -195,7 +198,104 @@ async function deleteMovie(req, res) {
   }
 }
 
-async function updateMovie(req, res) {}
+async function updateMovie(req, res) {
+  try {
+    const id = parseInt(req.params.id, 10);
+
+    if (Number.isNaN(id) || id <= 0) {
+      return res.status(400).json({ message: "Id no válido" });
+    }
+
+    const movies = await readMovies();
+    const index = movies.findIndex((m) => m.id === id);
+
+    if (index === -1 || movies[index].active === false) {
+      return res.status(404).json({ message: "Película no encontrada" });
+    }
+
+    const { titulo, genero, anio, duracion, image_url, idioma, descripcion } =
+      req.body;
+
+    if (
+      !titulo ||
+      !genero ||
+      !anio ||
+      !duracion ||
+      !image_url ||
+      !idioma ||
+      !descripcion
+    ) {
+      return res.status(400).json({ message: "Faltan datos obligatorios" });
+    }
+
+    if (
+      typeof titulo !== "string" ||
+      typeof genero !== "string" ||
+      typeof image_url !== "string" ||
+      typeof idioma !== "string" ||
+      typeof descripcion !== "string"
+    ) {
+      return res.status(400).json({
+        message: "Los campos de texto deben ser strings",
+      });
+    }
+
+    const parsedAnio = parseInt(anio, 10);
+    const parsedDuracion = parseInt(duracion, 10);
+    const currentYear = new Date().getFullYear();
+
+    if (
+      Number.isNaN(parsedAnio) ||
+      parsedAnio <= 0 ||
+      parsedAnio > currentYear
+    ) {
+      return res.status(400).json({
+        message: `El año debe ser entre 1 y ${currentYear}`,
+      });
+    }
+
+    if (Number.isNaN(parsedDuracion) || parsedDuracion <= 0) {
+      return res.status(400).json({
+        message: "La duración debe ser un número positivo",
+      });
+    }
+
+    const duplicate = movies.some(
+      (m, i) =>
+        i !== index &&
+        m.active === true &&
+        m.title.toLowerCase() === titulo.toLowerCase() &&
+        m.genre.toLowerCase() === genero.toLowerCase()
+    );
+
+    if (duplicate) {
+      return res.status(409).json({
+        message: "Ya existe otra película con el mismo título y género",
+      });
+    }
+
+    movies[index] = {
+      ...movies[index],
+      title: titulo,
+      genre: genero,
+      year: parsedAnio,
+      duration_min: parsedDuracion,
+      image_url,
+      language: idioma,
+      description: descripcion,
+    };
+
+    await writeMovies(movies);
+
+    return res.status(200).json({
+      message: "Película actualizada con éxito!",
+      pelicula: movies[index],
+    });
+  } catch (err) {
+    console.error("Error en la actualización", err);
+    return res.status(500).json({ message: "Error interno del servidor" });
+  }
+}
 
 module.exports = {
   getAllMovies,
