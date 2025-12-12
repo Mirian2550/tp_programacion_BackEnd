@@ -187,7 +187,7 @@ async function deleteMovie(req, res) {
 
     return res.json({
       message: "Película eliminada correctamente!",
-      libro: movies[index],
+      movie: movies[index],
     });
   } catch (err) {
     console.error("Error del delete /movies/:id", err);
