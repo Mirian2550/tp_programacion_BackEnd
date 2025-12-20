@@ -19,7 +19,8 @@ async function writeMovies(movies) {
 async function getAllMovies(req, res) {
   try {
     const movies = await readMovies();
-    const activeMovies = movies.filter((m) => m.isDeleted !== true); // Lee correctamente el query parameter 'genre'
+    // Usamos 'active' para ser consistentes con deleteMovie
+    const activeMovies = movies.filter((m) => m.active !== false);
 
     const filterGenre = req.query.genre;
 
@@ -28,19 +29,13 @@ async function getAllMovies(req, res) {
         (movie) => movie.genre.toLowerCase() === filterGenre.toLowerCase()
       );
 
-      if (filteredMovies.length === 0) {
-        return res.status(404).json({
-          mensaje: `No se han encontrado películas en el género: ${filterGenre}`,
-        });
-      }
-
+      // Devolvemos status 200 aunque esté vacío
       return res.json(filteredMovies);
     }
 
     res.json(activeMovies);
   } catch (err) {
     console.log("Error al leer el archivo: ", err);
-
     res.status(500).send("Error interno del servidor");
   }
 }

@@ -85,7 +85,7 @@
     "image_url": "https://pics.filmaffinity.com/El_secreto_de_sus_ojos-483213496-large.jpg",
     "language": "Español",
     "description": "Un exagente judicial revive el caso de un asesinato sin resolver, explorando el amor no correspondido y la justicia.",
-    "active": true
+    "active": false
   },
   {
     "id": 9,
@@ -320,13 +320,13 @@
   },
   {
     "id": 30,
-    "title": "La casaaa",
-    "genre": "Drama",
-    "year": 2007,
-    "duration_min": 118,
-    "image_url": "https://example.com/img.jpg",
+    "title": "REC",
+    "genre": "Terror",
+    "year": 2008,
+    "duration_min": 78,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIvrhuCHSGI7KKoVMC68xLRiYIyq7kjbbr5g&s",
     "language": "Español",
-    "description": "Otra descripción",
-    "active": false
+    "description": "En el interior de un edificio residencial, una reportera y su camarógrafo graban el terrible brote de una enfermedad que transforma a los humanos en caníbales. Uno tras otro, los vecinos del inmueble se convierten en monstruos sedientos de sangre.",
+    "active": true
   }
 ]
